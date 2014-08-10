@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/saip106/touchstone",
   "devDependencies": {
-    "gulp": "^3.8.7"
+    "gulp": "^3.8.7",
+    "mocha": "^1.21.4"
   }
 }
