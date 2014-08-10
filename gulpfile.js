@@ -7,8 +7,8 @@ var jshint = require('gulp-jshint');
 
 gulp.task('default', ['test']);
 
-gulp.task('test', [], function () {
-    console.log('testing...');
+gulp.task('test', ['lint'], function () {
+    
 });
 
 gulp.task('lint', function () {
