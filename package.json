@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/saip106/touchstone/issues"
   },
-  "homepage": "https://github.com/saip106/touchstone"
+  "homepage": "https://github.com/saip106/touchstone",
+  "devDependencies": {
+    "gulp": "^3.8.7"
+  }
 }
