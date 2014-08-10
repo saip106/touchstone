@@ -1,3 +1,4 @@
 - Check if a GET request works
-    - make a GET call and get response
-    - check is the response has 200 status code
+    - make a GET call and get response (DONE)
+    - check is the response has 200 status code (DONE)
+    -

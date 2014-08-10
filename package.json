@@ -28,5 +28,8 @@
     "mocha": "^1.21.4",
     "gulp-jshint": "^1.8.4",
     "gulp-mocha": "^0.5.2"
+  },
+  "dependencies": {
+    "request": "^2.40.0"
   }
 }
