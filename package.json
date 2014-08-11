@@ -1,38 +1,40 @@
 {
-  "name": "touchstone",
-  "version": "0.0.0",
-  "description": "Testing framework for ReSTful web services",
-  "bin": {
-    "ts": "bin/touchstone.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/saip106/touchstone.git"
-  },
-  "keywords": [
-    "nodejs",
-    "npm",
-    "testing",
-    "rest",
-    "json"
-  ],
-  "author": "Sai Gudigundla",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/saip106/touchstone/issues"
-  },
-  "homepage": "https://github.com/saip106/touchstone",
-  "devDependencies": {
-    "gulp": "^3.8.7",
-    "mocha": "^1.21.4",
-    "gulp-jshint": "^1.8.4",
-    "gulp-mocha": "^0.5.2"
-  },
-  "dependencies": {
-    "request": "^2.40.0",
-    "commander": "^2.3.0"
-  }
+    "name" : "touchstone",
+    "version" : "0.0.1",
+    "description" : "Testing framework for ReSTful web services",
+    "preferGlobal" : "true",
+    "main": "./bin/touchstone.js",
+    "bin" : {
+        "ts" : "./bin/touchstone.js"
+    },
+    "scripts" : {
+        "test" : "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/saip106/touchstone.git"
+    },
+    "keywords" : [
+        "nodejs",
+        "npm",
+        "testing",
+        "rest",
+        "json"
+    ],
+    "author" : "Sai Gudigundla",
+    "license" : "MIT",
+    "bugs" : {
+        "url" : "https://github.com/saip106/touchstone/issues"
+    },
+    "homepage" : "https://github.com/saip106/touchstone",
+    "devDependencies" : {
+        "gulp" : "^3.8.7",
+        "mocha" : "^1.21.4",
+        "gulp-jshint" : "^1.8.4",
+        "gulp-mocha" : "^0.5.2"
+    },
+    "dependencies" : {
+        "request" : "^2.40.0",
+        "commander" : "^2.3.0"
+    }
 }
