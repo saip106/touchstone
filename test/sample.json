@@ -20,7 +20,7 @@
                     "name": "GET"
                 },
                 "uri": {
-                    "path": "localhost:56124/ActionItems?statusKey=2"
+                    "path": "google.com"
                 },
                 "scheme": {
                     "name": "http",
