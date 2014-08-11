@@ -4,7 +4,7 @@
 'use strict';
 
 var assert = require("assert");
-var touchstone = require('../lib/touchstone');
+var touchstone = require('../lib/helper');
 
 describe('when accessing touchstone', function () {
     it('should be defined', function () {

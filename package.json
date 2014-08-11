@@ -2,7 +2,9 @@
   "name": "touchstone",
   "version": "0.0.0",
   "description": "Testing framework for ReSTful web services",
-  "main": "index.js",
+  "bin": {
+    "ts": "bin/touchstone.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +32,7 @@
     "gulp-mocha": "^0.5.2"
   },
   "dependencies": {
-    "request": "^2.40.0"
+    "request": "^2.40.0",
+    "commander": "^2.3.0"
   }
 }

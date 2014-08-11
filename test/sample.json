@@ -1,0 +1,36 @@
+{
+    "version": 0,
+    "nodes": [
+        {
+            "request": {
+                "id": "12345",
+                "name": "some test",
+                "type": "request",
+                "headers": [
+                    {
+                        "key": "clientName",
+                        "value": "WakeMed"
+                    },
+                    {
+                        "key": "token",
+                        "value": "123"
+                    }
+                ],
+                "method": {
+                    "name": "GET"
+                },
+                "uri": {
+                    "path": "localhost:56124/ActionItems?statusKey=2"
+                },
+                "scheme": {
+                    "name": "http",
+                    "version": "v11"
+                }
+            },
+            "response": {
+
+            }
+        }
+    ]
+}
+
