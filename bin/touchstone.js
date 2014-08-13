@@ -42,7 +42,7 @@
 		        console.log(options.url + " success");
 	        }
 	        else {
-		        console.log(options.url + response.statusCode);
+		        console.log(options.url + ' failed with error code: ' + response.statusCode);
 	        }
         }
 
