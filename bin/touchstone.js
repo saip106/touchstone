@@ -37,21 +37,42 @@
 
         var nodes = input.nodes;
 
-        function callback(response) {
-            console.log(response.statusCode);
+        function callback(error, response, body) {
+	        if (!error && response.statusCode === 200) {
+		        console.log(body);
+	        }
+	        else {
+		        console.log('Error');
+	        }
         }
 
         for(var i = 0; i < nodes.length; i++) {
 
-            if(nodes[i].type !== 'Request') return;
+            if(nodes[i].type !== 'Request') continue;
             
-            var request = nodes[i].request;
-            if(request.name === 'GET') {
-                var url = request.scheme.name + '://' + request.uri.path;
-                helper.get(url, callback);
+            if (nodes[i].method.name === 'GET') {
+
+	            try {
+		            var url = nodes[i].uri.scheme.name + '://' + nodes[i].uri.path;
+		            var items = nodes[i].uri.query.items;
+		            if (items.length > 0) {
+			            var queryString;
+			            for (var j; j < items.length; j++) {
+				            if (items[j].enabled) {
+					            queryString += items[j].name + '=' + items[j].value;
+				            }
+			            }
+			            url += '?' + queryString;
+		            }
+		            helper.get(url, callback);
+	            }
+	            catch (error) {
+		            console.log(nodes[i]);
+	            }
+
             }
             else {
-                console.log('some other method: ' + request.name);
+                //console.log('some other method: ' + nodes[i].method.name);
             }
         }
     }
