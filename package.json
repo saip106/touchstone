@@ -2,6 +2,7 @@
     "name" : "touchstone",
     "version" : "0.0.1",
     "description" : "Testing framework for ReSTful web services",
+    "jshintConfig" : "./.jshintrc",
     "preferGlobal" : "true",
     "main": "./bin/touchstone.js",
     "bin" : {

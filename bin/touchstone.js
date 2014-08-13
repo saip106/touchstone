@@ -42,7 +42,8 @@
         }
 
         for(var i = 0; i < nodes.length; i++) {
-            helper.get(nodes[i].request.scheme.name + '://' + nodes[i].request.uri.path, callback);
+            var url = nodes[i].request.scheme.name + '://' + nodes[i].request.uri.path;
+            helper.get(url, callback);
         }
     }
 
