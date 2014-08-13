@@ -37,12 +37,12 @@
 
         var nodes = input.nodes;
 
-        function callback(error, response, body) {
+        function callback(error, response, body, options) {
 	        if (!error && response.statusCode === 200) {
-		        console.log("success");
+		        console.log(options.url + " success");
 	        }
 	        else {
-		        console.log(response.statusCode);
+		        console.log(options.url + response.statusCode);
 	        }
         }
 
