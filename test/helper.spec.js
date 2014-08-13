@@ -44,7 +44,7 @@ describe('when parsing a uri', function () {
         describe('with query params defined in the uri itself', function () {
             it('should successfully parse the uri', function () {
 
-                uri.query.items = undefined;
+                uri.query = undefined;
                 uri.path = 'localhost:8080?patientKey=4'
 
                 var result = helper.parse(uri);
