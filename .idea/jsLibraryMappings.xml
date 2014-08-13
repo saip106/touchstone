@@ -2,7 +2,9 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{touchstone node_modules}" />
+    <file url="file://$PROJECT_DIR$/bin/touchstone.js" libraries="{Node.js v0.10.26 Core Modules}" />
     <file url="file://$PROJECT_DIR$/gulpfile.js" libraries="{Node.js Globals}" />
+    <file url="file://$PROJECT_DIR$/test/touchstone.spec.js" libraries="{Node.js v0.10.26 Core Modules}" />
     <includedPredefinedLibrary name="Node.js Globals" />
   </component>
 </project>

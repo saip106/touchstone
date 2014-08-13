@@ -48,31 +48,20 @@
 
         for(var i = 0; i < nodes.length; i++) {
 
-            if(nodes[i].type !== 'Request') continue;
+            if(nodes[i].type !== 'Request') {
+                continue;
+            }
             
             if (nodes[i].method.name === 'GET') {
 
 	            try {
-		            var url = nodes[i].uri.scheme.name + '://' + nodes[i].uri.path;
-		            var items = nodes[i].uri.query.items;
-		            if (items.length > 0) {
-			            var queryString;
-			            for (var j; j < items.length; j++) {
-				            if (items[j].enabled) {
-					            queryString += items[j].name + '=' + items[j].value;
-				            }
-			            }
-			            url += '?' + queryString;
-		            }
-		            helper.get(url, callback);
+                    var uri = helper.parse(nodes[i].uri);
+		            helper.get(uri, callback);
 	            }
 	            catch (error) {
 		            console.log(nodes[i]);
 	            }
 
-            }
-            else {
-                //console.log('some other method: ' + nodes[i].method.name);
             }
         }
     }
