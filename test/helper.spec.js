@@ -1,4 +1,4 @@
-/*jshint node:true, strict:false*/
+/*jshint node:true*/
 /*globals describe, it, beforeEach*/
 'use strict';
 
@@ -19,7 +19,7 @@ describe('when extracting a url', function () {
             }
         };
         done();
-    });
+    })
 
     describe('without any query params', function () {
         it('should successfully parse the url', function () {

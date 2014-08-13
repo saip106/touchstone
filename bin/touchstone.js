@@ -18,7 +18,7 @@
             .version('0.0.1')
             .usage('[options]')
             .option('-f, --filepath [filepath]', 'path of the file that contains test json data')
-            .parse(process.argv);
+            .parse(process.argv)
 
         return {
             filepath: commander.filepath
@@ -34,7 +34,6 @@
 
     function processInputFile(filepath) {
         var input = require(filepath);
-
         var nodes = input.nodes;
 
         function callback(error, response, body, options) {
