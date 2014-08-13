@@ -55,7 +55,7 @@
             if (nodes[i].method.name === 'GET') {
                 var options = {
                     url: helper.parseUrl(nodes[i].uri),
-                    headers: helper.parseOptions(nodes[i].headers)
+                    headers: helper.parseHeaders(nodes[i].headers)
                 };
                 helper.get(options, callback);
             }
