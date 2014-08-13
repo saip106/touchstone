@@ -42,10 +42,18 @@
         }
 
         for(var i = 0; i < nodes.length; i++) {
-            var url = nodes[i].request.scheme.name + '://' + nodes[i].request.uri.path;
-            helper.get(url, callback);
+
+            var request = nodes[i].request;
+            if(request.name === 'GET') {
+                var url = request.scheme.name + '://' + request.uri.path;
+                helper.get(url, callback);
+            }
+            else {
+                console.log('some other method: ' + request.name);
+            }
         }
     }
 
     run();
+
 }.call(this));
