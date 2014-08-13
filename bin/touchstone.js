@@ -43,6 +43,8 @@
 
         for(var i = 0; i < nodes.length; i++) {
 
+            if(nodes[i].type !== 'Request') return;
+            
             var request = nodes[i].request;
             if(request.name === 'GET') {
                 var url = request.scheme.name + '://' + request.uri.path;
