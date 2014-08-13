@@ -53,15 +53,8 @@
             }
             
             if (nodes[i].method.name === 'GET') {
-
-	            try {
-                    var uri = helper.parse(nodes[i].uri);
-		            helper.get(uri, callback);
-	            }
-	            catch (error) {
-		            console.log(nodes[i]);
-	            }
-
+                var uri = helper.parse(nodes[i].uri);
+                helper.get(uri, callback);
             }
         }
     }
