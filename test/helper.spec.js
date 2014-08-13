@@ -35,10 +35,16 @@ describe('when extracting a url', function () {
                 enabled: true,
                 name: 'foo',
                 value: 'bar'
-            })
+            });
+
+            url.query.items.push({
+                enabled: true,
+                name: 'token',
+                value: '123'
+            });
 
             var result = helper.parseUrl(url);
-            assert.equal(result, 'http://localhost:8080?foo=bar');
+            assert.equal(result, 'http://localhost:8080?foo=bar&token=123');
         });
 
         describe('with query params defined in the url itself', function () {
