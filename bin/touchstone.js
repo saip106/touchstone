@@ -53,8 +53,11 @@
             }
             
             if (nodes[i].method.name === 'GET') {
-                var uri = helper.parse(nodes[i].uri);
-                helper.get(uri, callback);
+                var options = {
+                    url: helper.parseUrl(nodes[i].uri),
+                    headers: helper.parseOptions(nodes[i].headers)
+                };
+                helper.get(options, callback);
             }
         }
     }

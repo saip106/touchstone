@@ -5,11 +5,11 @@
 var assert = require("assert");
 var helper = require('../lib/helper');
 
-describe('when parsing a uri', function () {
+describe('when extracting a url', function () {
 
-    var uri;
+    var url;
     beforeEach(function (done) {
-        uri = {
+        url = {
             scheme: {
                 name: 'http'
             },
@@ -22,34 +22,52 @@ describe('when parsing a uri', function () {
     });
 
     describe('without any query params', function () {
-        it('should successfully parse the uri', function () {
-            var result = helper.parse(uri);
+        it('should successfully parse the url', function () {
+            var result = helper.parseUrl(url);
             assert.equal(result, 'http://localhost:8080');
         });
     });
 
     describe('with query params', function () {
-        it('should successfully parse the uri', function () {
+        it('should successfully parse the url', function () {
 
-            uri.query.items.push({
+            url.query.items.push({
                 enabled: true,
                 name: 'foo',
                 value: 'bar'
             })
 
-            var result = helper.parse(uri);
+            var result = helper.parseUrl(url);
             assert.equal(result, 'http://localhost:8080?foo=bar');
         });
 
-        describe('with query params defined in the uri itself', function () {
-            it('should successfully parse the uri', function () {
+        describe('with query params defined in the url itself', function () {
+            it('should successfully parse the url', function () {
 
-                uri.query = undefined;
-                uri.path = 'localhost:8080?patientKey=4'
+                url.query = undefined;
+                url.path = 'localhost:8080?patientKey=4'
 
-                var result = helper.parse(uri);
+                var result = helper.parseUrl(url);
                 assert.equal(result, 'http://localhost:8080?patientKey=4');
             });
         });
+    });
+});
+
+describe('when extracting headers', function () {
+    it('should get proper http headers', function () {
+        var headers = [{
+                enabled: true,
+                name: 'token',
+                value: '123'
+            },
+            {
+                enabled: true,
+                name: 'clientName',
+                value: 'foo'
+            }];
+        var result = helper.extractHeaders(headers);
+        assert.equal(result.token, '123');
+        assert.equal(result.clientName, 'foo');
     });
 });
