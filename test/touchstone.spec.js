@@ -14,7 +14,7 @@ describe('when accessing touchstone', function () {
     });
 });
 
-describe('when making a GET request to google.com', function() {
+xdescribe('when making a GET request to google.com', function() {
     it('should get a 200 status code', function() {
         helper.get('http://www.google.com', function (response) {
             assert.equal(response.statusCode, '200', 'Status code is not ok');

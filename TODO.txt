@@ -1,3 +1,10 @@
+TODO
+----
+    - fail gulp if linting fails
+    -
+
+Features
+--------
 When some one run the command 'node touchstone.js'
     - read a json file
     - for each request
@@ -5,9 +12,3 @@ When some one run the command 'node touchstone.js'
         - get response
         - compare the response with expected response
         - pass/fail
-
-
-- Check if a GET request works
-    - make a GET call and get response (DONE)
-    - check is the response has 200 status code (DONE)
-    -
